@@ -7,7 +7,7 @@
             options = {};
         }
 
-        this.minDistance = options.minDistance || 150;
+        this.maxDistance = options.maxDistance || 150;
         this.maxVelocity = options.maxVelocity || 1;
         this.particlesAmount = options.particlesAmount || 100;
         this.particles = [];
@@ -70,7 +70,7 @@
         g = (g < 60) ? 60 : g|g;
         b = (b < 120) ? 120 : b|b;
 
-        var alpha = 1 - dist / this.minDistance;
+        var alpha = 1 - dist / this.maxDistance;
 
         if (alpha > 0.4) {
             alpha = 0.4;
@@ -94,7 +94,7 @@
             var j;
             for (j = i + 1; j < length; j++) {
                 var dist = distance(this.particles[i], this.particles[j]);
-                if (dist < this.minDistance) {
+                if (dist < this.maxDistance) {
                     this.drawLine(this.particles[i], this.particles[j], dist);
                 }
             }
