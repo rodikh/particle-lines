@@ -18,15 +18,19 @@
 
         // check bounds
         if (this.x > this.bounds.width) {
-            this.x = 0;
-        } else if (this.x < 0) {
+            this.vx = -this.vx;
             this.x = this.bounds.width;
+        } else if (this.x < 0) {
+            this.vx = -this.vx;
+            this.x = 0;
         }
 
         if (this.y > this.bounds.height) {
-            this.y = 0;
-        } else if (this.y < 0) {
+            this.vy = -this.vy;
             this.y = this.bounds.height;
+        } else if (this.y < 0) {
+            this.vy = -this.vy;
+            this.y = 0;
         }
     };
 

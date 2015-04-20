@@ -21,15 +21,19 @@
 
         // check bounds
         if (this.x > this.bounds.width) {
-            this.x = 0;
-        } else if (this.x < 0) {
+            this.vx = -this.vx;
             this.x = this.bounds.width;
+        } else if (this.x < 0) {
+            this.vx = -this.vx;
+            this.x = 0;
         }
 
         if (this.y > this.bounds.height) {
-            this.y = 0;
-        } else if (this.y < 0) {
+            this.vy = -this.vy;
             this.y = this.bounds.height;
+        } else if (this.y < 0) {
+            this.vy = -this.vy;
+            this.y = 0;
         }
     };
 
@@ -101,12 +105,12 @@
      * @param dist Distance between the points
      */
     ParticleLines.prototype.drawLine = function (p1, p2, dist){
-        var r = (p1.y / this.canvas.height) * 255;
-        var g = (p2.x / this.canvas.width) * 255;
+        var r = 100 + (p1.y / this.canvas.height) * 155;
+        var g = 100 + (p2.x / this.canvas.width) * 155;
         var b = 3 * (p1.x + p1.y) / (this.canvas.width + this.canvas.height) * 255;
 
-        r = (r < 60) ? 60 : r|r;
-        g = (g < 60) ? 60 : g|g;
+        r |= r;
+        g |= g;
         b = (b < 120) ? 120 : b|b;
 
         var alpha = 1 - dist / this.maxDistance;
