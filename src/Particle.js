@@ -1,7 +1,5 @@
-(function () {
-    'use strict';
-
-    var Particle = function (point, velocity, bounds) {
+export default class Particle {
+    constructor(point, velocity, bounds) {
         this.x = point.x;
         this.y = point.y;
 
@@ -9,9 +7,9 @@
         this.vy = velocity.y;
 
         this.bounds = bounds;
-    };
+    }
 
-    Particle.prototype.move = function () {
+    move() {
         // add velocity to position
         this.x += this.vx;
         this.y += this.vy;
@@ -32,8 +30,5 @@
             this.vy = -this.vy;
             this.y = 0;
         }
-    };
-
-    window.Particle = Particle;
-
-} ());
+    }
+}

@@ -1,11 +1,17 @@
 {
-    "name": "particle-lines",
-    "author": "Rodik Hanukaev",
-    "devDependencies": {
-        "grunt": "0.4.x",
-        "grunt-contrib-uglify": "0.5.*",
-        "grunt-contrib-concat": "0.4.*",
-        "grunt-contrib-jshint": "0.10.*",
-        "grunt-jscs-checker": "0.4.*"
-    }
+  "name": "particle-lines",
+  "author": "Rodik Hanukaev",
+  "description": "particle-lines\r ==============\r Inspired by Topaz's Particle Lines http://www.topaz1008.com/",
+  "version": "1.0.0",
+  "main": "src/ParticleLines.js",
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodikh/particle-lines.git"
+  },
+  "license": "ISC",
+  "homepage": "https://github.com/rodikh/particle-lines#readme"
 }

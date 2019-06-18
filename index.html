@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <title>Particle Lines</title>
-    <style>
-
-    </style>
 </head>
-<body>
-    <canvas id="main"></canvas>
+<body style="background: #33383f; color: white; font-family: 'Helvetica', sans-serif;">
+<h1>Particle Lines - Demo</h1>
+<canvas id="main" width="600" height="400" style="margin: auto;"></canvas>
+<script type="module">
+    import ParticleLines from './src/ParticleLines.js'
 
-    <script src="js/Particle.js"></script>
-    <script src="js/ParticleLines.js"></script>
-    <!--<script src="dist/particle-lines.min.js"></script>-->
-
-    <script>
-        var canvas = document.getElementById('main');
-        var particleLines = new ParticleLines(canvas, {particlesAmount: 100, maxDistance: 150});
-    </script>
+    const canvas = document.getElementById('main');
+    new ParticleLines(canvas, {particlesAmount: 100, maxDistance: 150});
+</script>
 </body>
 </html>

@@ -17,11 +17,11 @@ Instantiate the ParticleLines class and pass a canvas element to it's constructo
 <body>
     <canvas id="main"></canvas>
 
-    <script src="dist/particle-lines.min.js"></script>
-
-    <script>
-        var canvas = document.getElementById('main');
-        var particleLines = new ParticleLines(canvas, {maxDistance: 150});
+    <script type="module">
+        import ParticleLines from 'particle-lines'
+    
+        const canvas = document.getElementById('main');
+        new ParticleLines(canvas, {particlesAmount: 100, maxDistance: 150});
     </script>
 </body>
 ```
