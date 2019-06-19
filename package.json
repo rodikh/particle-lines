@@ -2,8 +2,9 @@
   "name": "@rodikh/particle-lines",
   "author": "Rodik Hanukaev",
   "description": "particle-lines\r ==============\r Inspired by Topaz's Particle Lines http://www.topaz1008.com/",
-  "version": "1.0.0",
-  "main": "src/ParticleLines.js",
+  "version": "1.0.1",
+  "private": false,
+  "main": "src/index.js",
   "dependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
