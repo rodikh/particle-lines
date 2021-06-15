@@ -1,4 +1,4 @@
-export default class Particle {
+class Particle {
     constructor(point, velocity, bounds) {
         this.x = point.x;
         this.y = point.y;
@@ -32,3 +32,5 @@ export default class Particle {
         }
     }
 }
+
+module.exports = Particle;

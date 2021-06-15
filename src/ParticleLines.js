@@ -1,6 +1,6 @@
-import Particle from './Particle.js';
+const Particle = require('./Particle.js');
 
-export default class ParticleLines {
+class ParticleLines {
     constructor(canvas, options) {
         if (!options) {
             options = {};
@@ -109,3 +109,5 @@ export default class ParticleLines {
 function distance(p1, p2) {
     return Math.sqrt((p2.x - p1.x) * (p2.x - p1.x) + (p2.y - p1.y) * (p2.y - p1.y));
 }
+
+module.exports = ParticleLines;
