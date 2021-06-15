@@ -1,4 +1,2 @@
-module.exports = {
-    Particle: require('./Particle.js'),
-    ParticleLines: require('./ParticleLines.js')
-};
+export {default as Particle} from './Particle';
+export {default as ParticleLines} from './ParticleLines';

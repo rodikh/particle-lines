@@ -2,8 +2,9 @@
   "name": "@rodikh/particle-lines",
   "author": "Rodik Hanukaev",
   "description": "particle-lines\r ==============\r Inspired by Topaz's Particle Lines http://www.topaz1008.com/",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
+  "type":"module",
   "main": "src/index.js",
   "dependencies": {},
   "scripts": {
